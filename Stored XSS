@@ -1,0 +1,30 @@
+# Exploit Title: Simple Cold Storage Management System v1.0 - Stored XSS in "First Name"
+# Exploit Author: Rahul Singh
+# Vendor Name: oretnom23
+# Vendor Homepage: https://www.sourcecodester.com/php/15088/simple-cold-storage-management-system-using-phpoop-source-code.html
+# Software Link: https://www.sourcecodester.com/php/15088/simple-cold-storage-management-system-using-phpoop-source-code.html
+# Version: v1.0
+# Tested on: Windows 10, Apache
+
+
+Description : A Stored XSS in Simple Cold Storage Management System v1.0 allows an attacker to input arbitrary javascript code into those vulnerable parameters
+
+
+Vulnerable Parameters:
+First Name
+
+
+
+Steps:
+1) Login into  account
+2) Go to My Account
+3) Now in Parameters "First Name" put your payload
+
+
+
+Payload: <script>alert(1)</script>
+
+
+
+4) Now save the user and our Java script payload will be stored.
+5) As the payload has been stored in the database, the alert will trigger everytime user will go to My account page.
